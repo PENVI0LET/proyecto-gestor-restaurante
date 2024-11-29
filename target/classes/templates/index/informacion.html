@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información del Gestor de Restaurante de Comidas Rápidas.">
+    <title>Información - Sabor Imperial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #f8f9fa;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            padding-top: 70px;
+        }
+
+        .navbar {
+            background-color: #d32f2f;
+        }
+
+        .navbar-brand img {
+            max-width: 70px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffeb3b !important;
+        }
+
+        .section {
+            padding: 2rem 0;
+        }
+
+        .section.bg-light {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+		
+		footer {
+		         background-color: #d32f2f;
+		         color: #fff;
+		         text-align: center;
+		         padding: 1rem 0;
+				max-height: 50px;
+		     }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" th:href="@{/}">
+                <img src="/logo_negro.svg" alt="Logo del Restaurante">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}">Inicio</a>
+                    </li>
+					
+
+					<li class="nav-item">
+											<a class="nav-link" th:href="@{/informacion}">Informacion - Roles</a>
+					                    </li>
+										
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/pqr/crear}">Contacto - PQR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/nosotros}">Sobre Nosotros</a>
+                    </li>
+					
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/login}">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <div class="section bg-light">
+        <div class="container text-center">
+            <h1 class="mb-4">Gestor de Restaurante de Comidas Rápidas</h1>
+            <p>Este sistema está diseñado para optimizar la gestión de pedidos, productos, inventarios y trabajadores en un restaurante de comidas rápidas.</p>
+            <p>Creado por: <strong>Jeison Fabian Gualdron</strong>, <strong>Valentina Mantilla</strong> y <strong>Gabriela Mendoza</strong>.</p>
+        </div>
+    </div>
+
+    <!-- Sección Información de Usuarios -->
+    <div class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">Información de Usuarios</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/roles.jpg" alt="Información de Usuarios" class="img-fluid rounded mb-4">
+                            <p>Este sistema permite a los usuarios gestionar su información de manera eficiente, mejorando los procesos de pedidos y atención al cliente.</p>
+							<h2>  Roles del sistema: </h2>
+							<p> Admin: Crear, editar y eliminar gestores, trabajadores y gerentes. </p>
+							<p> Gestor: Crear, editar, eliminar productos y comidas, gestionar el inventario y crea categorías. </p>
+							<p> Gerente: Ver trabajadores, editar información de trabajadores, ver el número de pedidos realizados por los trabajadores, calcular el precio total y gestionarlos </p>
+							<p> Trabajador: Crear pedidos seleccionando productos según categoría , Marcar faltantes en el inventario (aceite, bebidas, pan, etc.) , Registrar información del cliente al crear un pedido. </p>
+							</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+	<footer>
+	        <p>&copy; 2024 Sabor Imperial. Todos los derechos reservados.</p>
+	    </footer>
+	    
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
